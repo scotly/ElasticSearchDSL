@@ -45,8 +45,18 @@ descriptor.AddPage(condition.PageIndex, condition.PageSize)
 var connectionPool = new StaticConnectionPool(new Uri[] { new Uri("http://localhost:7019/elasicsearch") });
 var connectionSettings = new ConnectionSettings(connectionPool)
     .DefaultIndex("myindex")
-    .BasicAuthentication("user", "user12345");
+    .BasicAuthentication("user", "user12345")
+    .PrettyJson()
+    .DisableDirectStreaming();
 
 var elaticClient = new ElasticClient(connectionSettings);
+
+#if DEBUG
+
+var json = elaticClient.ToRawRequest(descriptor);
+Console.WriteLine(json);
+
+#endif
+
 var response = await elaticClient.SearchAsync<OrderNest>(descriptor);
 
