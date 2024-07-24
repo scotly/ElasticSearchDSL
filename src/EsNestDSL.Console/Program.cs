@@ -6,6 +6,7 @@ using EsNestDSL.Core.Nest;
 using EsNestDSL.Core.Extentions;
 using Nest;
 using Elasticsearch.Net;
+using EsNestDSL.Core.Components;
 
 var condition = new SearchCondition
 {
@@ -39,6 +40,12 @@ descriptor.AddPage(condition.PageIndex, condition.PageSize)
     .AddSort(new SortField<OrderNest>(s => s.OrderCreateddate, SortTypeEnum.Desc),
         new SortField<OrderNest>(s => s.OrderId, SortTypeEnum.Desc));
 
+
+//add Aggregation
+AggregationComponent<OrderNest> aggsComponent = new AggregationComponent<OrderNest>();
+aggsComponent.AddAgg("totalAmount", AggregationOperatorEnum.Sum, x => x.Amount);
+
+descriptor.BuildAggregation(aggsComponent);
 #endregion
 
 

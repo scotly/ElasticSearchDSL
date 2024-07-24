@@ -1,4 +1,5 @@
-﻿using EsNestDSL.Core.Enums;
+﻿using EsNestDSL.Core.Components;
+using EsNestDSL.Core.Enums;
 using EsNestDSL.Core.Fields;
 using Nest;
 
@@ -46,6 +47,18 @@ namespace EsNestDSL.Core.Extentions
 
                 return s;
             });
+        }
+
+        /// <summary>
+        /// build aggregation
+        /// </summary>
+        /// <param name="searchDescriptor"></param>
+        /// <param name="aggsComponent"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static SearchDescriptor<T> BuildAggregation<T>(this SearchDescriptor<T> searchDescriptor, AggregationComponent<T> aggsComponent) where T : class
+        {
+            return searchDescriptor.Aggregations(g => aggsComponent.BuildQuery());
         }
     }
 }

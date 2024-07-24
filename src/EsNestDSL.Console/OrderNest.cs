@@ -21,6 +21,8 @@ namespace EsNestDSL.Console
         [Keyword(Name = "orderPaystatus")]
         public string orderPaystatus { get; set; }
 
+        public long Amount { get; set; }
+
         [Nested]
         public List<OrderItemNest> orderitems { get; set; }
     }
