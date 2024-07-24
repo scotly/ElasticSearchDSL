@@ -66,6 +66,39 @@ namespace EsNestDSL.Core.Nest
             return AddQuery(field, position, componentType, val);
         }
 
+        /// <summary>
+        /// 添加range查询
+        /// </summary>
+        /// <param name="ltField"></param>
+        /// <param name="rangeType"></param>
+        /// <param name="ltOperator"></param>
+        /// <param name="gtField"></param>
+        /// <param name="gtOperator"></param>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        public NestSearchContainer<T, S> AddRangeQuery(RangeTypeEnum rangeType,
+            Expression<Func<S, object>> ltField, RangeOperEnum ltOperator,
+            Expression<Func<S, object>> gtField = null, RangeOperEnum gtOperator = RangeOperEnum.Non,
+            QueryPositionEnum position = QueryPositionEnum.Must)
+        {
+            var component = new RangeComponent<S>(ltField, rangeType, ltOperator, gtField, gtOperator, position,
+                ComponentType.Range);
+
+            AddComponent(component);
+
+            return this;
+        }
+
+        public NestSearchContainer<T, S> AddRangeQueryIF(bool condition, RangeTypeEnum rangeType,
+            Expression<Func<S, object>> lField, RangeOperEnum lOperator,
+            Expression<Func<S, object>> rField = null, RangeOperEnum rOperator = RangeOperEnum.Non,
+            QueryPositionEnum position = QueryPositionEnum.Must)
+        {
+            if (!condition) return this;
+
+            return AddRangeQuery(rangeType, lField, lOperator, rField, rOperator, position);
+        }
+
 
         /// <summary>
         /// add child Container,use nest usually
