@@ -1,8 +1,8 @@
-﻿using EsNestDSL.Core.Enums;
+﻿using ElasticSearchDSL.Core.Enums;
 using System;
 using System.Linq.Expressions;
 
-namespace EsNestDSL.Core.Fields
+namespace ElasticSearchDSL.Core.Fields
 {
     public class RangeField<S> : QueryField<S>
     {

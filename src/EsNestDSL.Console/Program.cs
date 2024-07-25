@@ -1,12 +1,12 @@
 ﻿
-using EsNestDSL.Console;
-using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
-using EsNestDSL.Core.Nest;
-using EsNestDSL.Core.Extentions;
+using ElasticSearchDSL.Console;
+using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
+using ElasticSearchDSL.Core.Nest;
+using ElasticSearchDSL.Core.Extentions;
 using Nest;
 using Elasticsearch.Net;
-using EsNestDSL.Core.Components;
+using ElasticSearchDSL.Core.Components;
 
 var condition = new SearchCondition
 {

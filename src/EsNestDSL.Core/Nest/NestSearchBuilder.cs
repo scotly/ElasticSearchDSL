@@ -1,10 +1,10 @@
-﻿using EsNestDSL.Core.Enums;
+﻿using ElasticSearchDSL.Core.Enums;
 using Nest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EsNestDSL.Core.Nest
+namespace ElasticSearchDSL.Core.Nest
 {
     public class NestSearchBuilder<T, S> where T : class where S : class
     {

@@ -1,4 +1,4 @@
-﻿namespace EsNestDSL.Core.Enums
+﻿namespace ElasticSearchDSL.Core.Enums
 {
     public enum QueryPositionEnum
     {

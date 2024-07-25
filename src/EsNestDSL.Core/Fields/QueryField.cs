@@ -1,8 +1,8 @@
-﻿using EsNestDSL.Core.Extentions;
+﻿using ElasticSearchDSL.Core.Extentions;
 using System;
 using System.Linq.Expressions;
 
-namespace EsNestDSL.Core.Fields
+namespace ElasticSearchDSL.Core.Fields
 {
     public class QueryField<S>
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EsNestDSL.Console
+namespace ElasticSearchDSL.Console
 {
     public class OrderNest
     {

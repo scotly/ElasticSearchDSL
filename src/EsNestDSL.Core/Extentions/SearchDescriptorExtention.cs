@@ -1,9 +1,9 @@
-﻿using EsNestDSL.Core.Components;
-using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Components;
+using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
 using Nest;
 
-namespace EsNestDSL.Core.Extentions
+namespace ElasticSearchDSL.Core.Extentions
 {
     public static class SearchDescriptorExtention
     {

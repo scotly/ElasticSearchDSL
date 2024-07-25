@@ -1,8 +1,8 @@
-﻿using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
 using Nest;
 
-namespace EsNestDSL.Core.Components
+namespace ElasticSearchDSL.Core.Components
 {
     public abstract class Component<S>
     {

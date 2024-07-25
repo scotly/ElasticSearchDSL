@@ -1,11 +1,11 @@
-﻿using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Extentions;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Extentions;
+using ElasticSearchDSL.Core.Fields;
 using Nest;
 using System;
 using System.Linq.Expressions;
 
-namespace EsNestDSL.Core.Components
+namespace ElasticSearchDSL.Core.Components
 {
     public class RangeComponent<S> : Component<S>
     {
