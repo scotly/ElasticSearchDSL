@@ -29,4 +29,4 @@ jobs:
     - name: 安装nuget
       uses: nuget/setup-nuget@v1
     - name: 推送nuget包
-      run: nuget push ./EsNestDSL.Core/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} -NoSymbol
+      run: nuget push ./ElasticSearchDSL.Core/bin/Release/*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} -NoSymbol
