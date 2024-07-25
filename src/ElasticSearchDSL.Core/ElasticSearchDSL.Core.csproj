@@ -1,12 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<Version>1.0.0</Version>
+		<Authors>Scotly</Authors>
+		<RepositoryUrl>https://github.com/scotly/ElasticSearchDSL.git</RepositoryUrl>
+		<Description>elasticsearch dsl，support nest search now, support parent-child search plan </Description>
+		<ProductName>ElasticSearchDLS</ProductName>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NEST" Version="7.14.1" />
-    <PackageReference Include="System.Text.Json" Version="8.0.4" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NEST" Version="7.14.1" />
+		<PackageReference Include="System.Text.Json" Version="8.0.4" />
+		<None Include="../../LICENSE" Pack="true" PackagePath=""/>
+	</ItemGroup>
 
 </Project>
