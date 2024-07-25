@@ -1,2 +1,2 @@
 # ElasticSearchNestDSL
-ElasticSearch.NET DSL  封装
+support nest search now, support parent-child search plan
