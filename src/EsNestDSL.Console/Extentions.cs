@@ -1,6 +1,6 @@
 ﻿using Nest;
 
-namespace EsNestDSL.Console
+namespace ElasticSearchDSL.Console
 {
     public static class Extentions
     {

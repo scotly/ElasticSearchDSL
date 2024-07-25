@@ -1,11 +1,11 @@
-﻿using EsNestDSL.Core.Components;
-using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Components;
+using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace EsNestDSL.Core.Nest
+namespace ElasticSearchDSL.Core.Nest
 {
     public class NestSearchContainer<T, S> where T : class where S : class
     {

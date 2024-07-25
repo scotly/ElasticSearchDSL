@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace EsNestDSL.Console
+namespace ElasticSearchDSL.Console
 {
     public class SearchCondition
     {

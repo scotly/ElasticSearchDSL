@@ -1,12 +1,12 @@
-﻿using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
 using Nest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace EsNestDSL.Core.Components
+namespace ElasticSearchDSL.Core.Components
 {
     public class AggregationComponent<T> where T : class
     {

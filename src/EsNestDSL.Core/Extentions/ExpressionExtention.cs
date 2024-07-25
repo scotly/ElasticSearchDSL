@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
-namespace EsNestDSL.Core.Extentions
+namespace ElasticSearchDSL.Core.Extentions
 {
     public static class ExpressionExtention
     {

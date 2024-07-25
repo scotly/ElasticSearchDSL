@@ -1,9 +1,9 @@
-﻿using EsNestDSL.Core.Enums;
-using EsNestDSL.Core.Fields;
+﻿using ElasticSearchDSL.Core.Enums;
+using ElasticSearchDSL.Core.Fields;
 using Nest;
 using System.Collections.Generic;
 
-namespace EsNestDSL.Core.Components
+namespace ElasticSearchDSL.Core.Components
 {
     /// <summary>
     /// comm query component
