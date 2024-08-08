@@ -108,7 +108,7 @@ namespace ElasticSearchDSL.Core.Nest
         /// <exception cref="Exception"></exception>
         public NestSearchContainer<T, S> AddContainer(NestSearchContainer<T, S> container)
         {
-            if (string.IsNullOrWhiteSpace(container.NestPath)) throw new Exception("nest index has must path");
+            //if (string.IsNullOrWhiteSpace(container.NestPath)) throw new Exception("nest index has must path");
 
             ChildContainers.Add(container);
 

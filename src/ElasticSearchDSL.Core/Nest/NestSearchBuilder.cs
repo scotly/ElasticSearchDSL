@@ -106,8 +106,24 @@ namespace ElasticSearchDSL.Core.Nest
                 var positionGroup = container.ChildContainers.GroupBy(g => g.Position);
                 foreach (var nestItem in positionGroup)
                 {
-                    var nestContainers = nestItem.Select(n => BuilderNestContainer(n, searchEntity));
+                    #region childs
+                    var childContainers = nestItem.Where(n => string.IsNullOrWhiteSpace(n.NestPath));
+                    if (childContainers != null && childContainers.Any())
+                    {
+                        foreach (var childContainer in childContainers)
+                        {
+                            QueryContainerDescriptor<T> childQuery = new QueryContainerDescriptor<T>();
+                            var childBool = BuildBoolContainer(childContainer, searchEntity);
+                            childQuery.Bool(q => childBool);
+                            mustContainers.Add(childQuery);
+                        }
+                    }
+                    #endregion
+
+                    #region nest
+                    var nestContainers = nestItem.Where(n => !string.IsNullOrWhiteSpace(n.NestPath)).Select(n => BuilderNestContainer(n, searchEntity));
                     addToContainer(nestItem.Key, nestContainers);
+                    #endregion
                 }
             }
 
