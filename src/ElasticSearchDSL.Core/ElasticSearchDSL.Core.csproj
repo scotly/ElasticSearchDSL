@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<Authors>Scotly</Authors>
 		<RepositoryUrl>https://github.com/scotly/ElasticSearchDSL.git</RepositoryUrl>
 		<Description>elasticsearch dsl，support nest search now, support parent-child search plan </Description>
